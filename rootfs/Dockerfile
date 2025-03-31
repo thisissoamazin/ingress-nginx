@@ -40,6 +40,7 @@ RUN apk update \
   && rm -rf /var/cache/apk/*
 
 COPY --chown=www-data:www-data etc /etc
+COPY --chown=www-data:www-data extra /etc
 
 COPY --chown=www-data:www-data bin/${TARGETARCH}/dbg /
 COPY --chown=www-data:www-data bin/${TARGETARCH}/nginx-ingress-controller /
