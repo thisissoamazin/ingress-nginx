@@ -20,6 +20,9 @@ set -o pipefail
 
 export NGINX_VERSION=1.25.5
 
+# Check for recent changes: https://github.com/nginx/njs/compare/0.8.9...master
+export NJS_VERSION=0.8.9
+
 # Check for recent changes: https://github.com/vision5/ngx_devel_kit/compare/v0.3.3...master
 export NDK_VERSION=v0.3.3
 
@@ -191,6 +194,9 @@ cd "$BUILD_PATH"
 # download, verify and extract the source files
 get_src 66dc7081488811e9f925719e34d1b4504c2801c81dee2920e5452a86b11405ae \
         "https://nginx.org/download/nginx-$NGINX_VERSION.tar.gz"
+
+get_src 918accac7ec252baac1146e49fdc0f5c101c66ef3b9ceba7ce1b59be704acebf \
+        "https://github.com/nginx/njs/archive/refs/tags/$NJS_VERSION.tar.gz" "njs"
 
 get_src aa961eafb8317e0eb8da37eb6e2c9ff42267edd18b56947384e719b85188f58b \
         "https://github.com/vision5/ngx_devel_kit/archive/$NDK_VERSION.tar.gz" "ngx_devel_kit"
@@ -490,6 +496,7 @@ WITH_MODULES=" \
   --add-module=$BUILD_PATH/lua-nginx-module \
   --add-module=$BUILD_PATH/stream-lua-nginx-module \
   --add-module=$BUILD_PATH/lua-upstream-nginx-module \
+  --add-module=$BUILD_PATH/njs/nginx \
   --add-dynamic-module=$BUILD_PATH/nginx-http-auth-digest \
   --add-dynamic-module=$BUILD_PATH/ModSecurity-nginx \
   --add-dynamic-module=$BUILD_PATH/ngx_http_geoip2_module \

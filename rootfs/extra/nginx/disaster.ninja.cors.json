@@ -1,0 +1,18 @@
+{
+  "allowed_origins": [
+    "https?://(?:.*\\.)?kontur.io(?:$|:|/)",
+    "https?://(?:.*\\.)?disaster\\.ninja(?:$|:|/)",
+    "https?://.*studio.*\\.foursquare\\.com(?:$|:|/)",
+    "https?://.*\\.unfolded\\.ai(?:$|:|/)",
+    "https?://.*\\.konturlabs\\.com(?:$|:|/)",
+    "https?://.*\\.a-a\\.cloud(?:$|:|/)",
+    "https?://localhost(?:$|:|/)",
+    "https?://127\\.0\\.0\\.1(?:$|:|/)",
+    "https?://(?:.*\\.)?test-cors.org(?:$|:|/)",
+    "https?://(new|map|www)?\\.?openaerialmap\\.org(?:$|:|/)"
+  ],
+  "allowed_headers": "mirror",
+  "exposed_headers": "omit",
+  "max_age": 7200,
+  "allow_credentials": true
+}

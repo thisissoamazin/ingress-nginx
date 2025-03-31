@@ -1,0 +1,24 @@
+{
+  "allowed_origins": [
+    "https?://(?:.*\\.)?kontur.io(?:$|:|/)",
+    "https?://(?:.*\\.)?disaster\\.ninja(?:$|:|/)",
+    "https?://.*studio.*\\.foursquare\\.com(?:$|:|/)",
+    "https?://.*\\.unfolded\\.ai(?:$|:|/)",
+    "https?://.*\\.konturlabs\\.com(?:$|:|/)",
+    "https?://.*\\.a-a\\.cloud(?:$|:|/)",
+    "https?://localhost(?:$|:|/)",
+    "https?://127\\.0\\.0\\.1(?:$|:|/)",
+    "https?://(?:.*\\.)?test-cors.org(?:$|:|/)",
+    "https?://(?:.*\\.)?rapideditor\\.org(?:$|:|/)",
+    "https?://(?:.*\\.)?mapwith\\.ai(?:$|:|/)",
+    "https?://(?:.*\\.)?openaerialmap\\.org(?:$|:|/)",
+    "https?://(?:.*\\.)?atik\\.dev(?:$|:|/)",
+    "https?://(?:.*\\.)?modext\\.ru(?:$|:|/)",
+    "https?://(?:.*\\.)?pdc\\.org(?:$|:|/)",
+    "https?://(?:.*\\.)?seeng\\.w3ddns\\.it(?:$|:|/)"
+  ],
+  "allowed_headers": "mirror",
+  "exposed_headers": "omit",
+  "max_age": 7200,
+  "allow_credentials": true
+}
